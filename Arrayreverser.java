@@ -1,0 +1,30 @@
+public class Arrayreverser {
+
+    public static void reverse(float[] arr) {
+        int start = 0;
+        int end = arr.length - 1;
+        while (start < end) {
+            float temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
+        }
+    }
+
+    public static void main(String[] args) {
+        float[] values = {5.8f, 2.6f, 9.0f, 3.4f, 7.1f};
+
+        System.out.println("Original array:");
+        for (float v : values) {
+            System.out.print(v + " ");
+        }
+
+        reverse(values);
+
+        System.out.println("\nReversed array:");
+        for (float v : values) {
+            System.out.print(v + " ");
+        }
+    }
+}
